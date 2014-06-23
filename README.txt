@@ -13,3 +13,19 @@ and the ability to change it.
 This package contains several utilities to reuse the code in your 
 notebook without the need to export/convert it everytime. 
 
+
+To import a notebook into another module do the following:
+
+	import ipnb.importer
+	import my_notebook
+
+	my_notebook.some_cool_method()
+
+
+You can also run a notebook directly from the command line:
+
+	python -m ipnb.run /path/to/my_notebook.ipynb
+
+Optionally specify '-s' to print the source code to stderr before execution 
+starts and '-d' to debug the notebook. Currently the implementation 
+will try to use PuDB and fallback to pdb
